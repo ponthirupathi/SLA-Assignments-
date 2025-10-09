@@ -1,2 +1,0 @@
-# SLA Assignments 
-Daily tasks
