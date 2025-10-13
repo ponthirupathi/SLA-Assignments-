@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <Style>
+        input[name="name"]{
+            border-color:red;
+        }
+        input[name="email"]{
+            border-color:red;
+        }
+         input[name="password"]{
+            border-color:red;
+        }
+        input[name="age"]{
+            border-color:red;
+        }
+       input[type="reset"]{
+            border-color:rgb(132, 255, 0);
+       }
+       input[type="submit"]{
+            border-color:rgb(160, 247, 11);
+       }
+        label{
+            color: rgb(6, 163, 235);
+        }
+        legend{
+            color: rgb(10, 244, 166);
+        }
+        h1{
+            color: brown;background-color: yellow; width: 270px;
+        }
+
+    </Style>
+</head>
+
+<body>
+    
+    <h1> Registration Form</h1>
+    <form>
+        <fieldset>
+            <legend> Login Registration Form</legend>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter ur Name.." required>
+            <br><br>
+
+            <label for="email">Email : </label>
+            <input type="email" id="email" name="email" placeholder="Enter ur Email.." required>
+            <br><br>
+
+            <label for="password">Password : </label>
+            <input type="password" id="password" name="password" placeholder="password with special char.." min="8"
+                max="16">
+            <br><br>
+
+            <label for="gender">Gender :</label>
+            <input type="radio" name="gender" id="gender" value="Male">
+            <label for="genter">Male</label>
+            <input type="radio" name="gender" id="gender" value="Female">
+            <label for="gender">Female</label>
+            <input type="radio" name="gender" id="gender" value="other">
+            <label for="gender">Other</label>
+            <br><br>
+
+            <label for="Hobbies">Hobbies : </label>
+            <input type="checkbox" name="Reding">
+            <label for="Hobbies">Reding</label>
+            <input type="checkbox" name="Movie Watchig">
+            <label for="Hobbies">Movie Watchig</label>
+            <input type="checkbox" name="Story writting">
+            <label for="Hobbies">Story writting</label>
+            <input type="checkbox" name="Drawing">
+            <label for="Hobbies">Drawing</label>
+            <br><br>
+
+            <label for="age">Age :</label>
+            <input type="number" name="age" id="age" required>
+            <br><br>
+
+            <input type="reset">
+            <input type="submit">
+
+
+
+        </fieldset>
+    </form>
+</body>
+
+</html>
