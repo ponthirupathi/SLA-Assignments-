@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice_task2</title>
+    <Style>
+        h1 {
+            font-size: 50px;
+            margin-left: 450px;
+            color: darkmagenta;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas: 
+             "p o n t" ;
+            grid-template-columns: 6fr 6fr 6fr 6fr;
+            /* grid-template-rows: 6fr 8fr; */
+            width: 900px;
+            height: 300px;
+            gap: 30px;
+        }
+
+        .iphone {
+            grid-area: o;
+            background-color: black;
+            color: white;
+            padding: 30px;
+            /* border: 2px; */
+            border-radius: 30px;
+        }
+
+        .sumsung {
+            grid-area: p;
+            
+            background-color: black;
+            color: white;
+            padding: 30px;
+            border-radius: 30px;
+
+        }
+
+        .oneplus {
+            grid-area: n;
+            background-color: black;
+            color: white;
+            padding: 30px;
+            border-radius: 30px;
+        }
+
+        .vivo {
+            grid-area: t;
+            background-color: black;
+            color: white;
+            padding: 30px;
+            border-radius: 30px;
+        }
+    </Style>
+</head>
+
+<body>
+    <h1>Product display...</h1>
+    <div class="container">
+        <div class="iphone">
+            <img src="./iphone17pro.jpeg" alt="iphone17pro">
+            <p>Apple iPhone 17 (Black, 256 GB) <br>
+                4.71,409 Ratings & 112 Reviews
+                <br> ₹82,900.
+            </p>
+        </div>
+
+        <div class="oneplus"><img src="./oneplus13.jpeg" alt="oneplus13">
+            <p>OnePlus 13 (Midnight Ocean, 256 GB) (12 GB RAM) <br>
+                4.5467 Ratings & 38 Reviews
+                <br> ₹61,839.
+            </p>
+        </div>
+        <div class="sumsung">
+            <img src="./sumsung.jpeg" alt="sumsung phone">
+            <p>Samsung Galaxy S24 Ultra 5G (Titanium Black, 256 GB) (12 GB RAM) <br>
+                4.66,643 Ratings & 510 Reviews <br>
+                ₹89,970₹1.</p>
+        </div>
+
+        <div class="vivo">
+            <img src="./vivo.jpeg" alt="vivo">
+            <p>vivo V40 5G (Titanium Grey, 128 GB) (8 GB RAM) <br>
+                4.58,949 Ratings & 906 Reviews <br>
+                ₹36,058.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

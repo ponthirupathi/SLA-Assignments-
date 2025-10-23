@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card (Flex + Grid)</title>
+    <style>
+       
+        .container {
+            display: flex;
+            flex-direction: column;
+           
+            align-items: center;
+           
+            justify-content: center; 
+            height: 100vh;
+            background-color: lightcyan;
+            gap: 20px;
+        }
+
+       
+        .profile {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+           
+            gap: 10px 20px;
+            color: rgb(241, 7, 7);
+            background-color: bisque;
+            border: 8px solid yellowgreen;
+            width: 400px;
+            padding: 20px;
+            font-size: 18px;
+            border-radius: 20px;
+            box-shadow: 10px 10px 15px black;
+        }
+
+        .profile p {
+            margin: 0;
+        }
+
+       
+        .h1 {
+            background-color: black;
+            color: white;
+            width: 220px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px gray;
+        }
+
+        
+        .label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="h1">Profile Card..</h1>
+
+        <div class="profile">
+            <p class="label">Name:</p>
+            <p>PONTHIRUPATHI</p>
+            <p class="label">Education:</p>
+            <p>B.Sc [AI&DS]</p>
+            <p class="label">Address:</p>
+            <p>Sivagangai</p>
+            <p class="label">Email:</p>
+            <p>ponkavi09@gmail.com</p>
+            <p class="label">Gender:</p>
+            <p>Male</p>
+            <p class="label">DoB:</p>
+            <p>06/07/2005</p>
+        </div>
+    </div>
+</body>
+
+</html>

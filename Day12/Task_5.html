@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_5</title>
+
+    <Style>
+        .con {
+            display: grid;
+            grid-template-areas: 
+             "p o"
+             "n t" ;
+            grid-template-columns: 6fr 6fr ;
+            grid-template-rows: 6fr 8fr;
+            width: 500px;
+            height: 500px;
+            
+           
+        }
+        .pon{
+            grid-area: p;
+            background-color: red;
+            padding: 50%;
+            border: 2px solid green;
+        }
+        .alan{
+            grid-area: o;
+            background-color: yellow;
+             padding: 50%;
+        }
+        .thi{
+            grid-area: n;
+            background-color: blanchedalmond;
+             padding: 50%;
+        }
+        .pa{
+            grid-area: t;
+            background-color: blue;
+            padding: 50%;
+        }
+    </Style>
+</head>
+
+<body>
+    <div class="con">
+        <div class="pon">pon</div>
+        <div class="alan">alan</div>
+        <div class="thi">thirupathi</div>
+        <div class="pa">kavi</div>
+    </div>
+
+</body>
+
+</html>
