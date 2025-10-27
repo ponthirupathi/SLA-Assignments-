@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_2</title>
+    <Style>
+     
+     .con{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+     }
+     .c{
+        max-width: 1000px;
+        margin: 10px;
+        background-color: rgb(113, 240, 113);
+        border-radius: 10px;
+        padding: 30px;
+
+     }
+     .a1{
+            background-color: aquamarine;
+     }
+     @media(max-width: 500px)
+     {
+        .con{
+            grid-template-columns: 1fr;
+        }
+     }
+
+    </Style>
+</head>
+
+<body>
+    <div class="con">
+        <div class="c a1">
+            <h1>colunm 1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nemo sed aperiam cumque qui nam architecto.
+                Esse quas minima, consequuntur id molestiae, cumque non nemo repellendus expedita dolore voluptatibus
+                temporibus!
+            </p>
+
+        </div>
+
+         <div class="c 2">
+            <h1>colunm 2</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nemo sed aperiam cumque qui nam architecto.
+                Esse quas minima, consequuntur id molestiae, cumque non nemo repellendus expedita dolore voluptatibus
+                temporibus!
+            </p>
+
+        </div>
+
+
+    </div>
+</body>
+
+</html>
