@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h3>Combine multiple conditions — if a user is an adult and subscribed, print “Welcome!”.</h3>
+
+    <input type="number" placeholder="Enter u r Age" id="age">
+    <input type="number" placeholder="subscribed id number" id="subscribed_id">
+
+    <button onclick=" checkAge() ">check</button>
+    <p id="result">result</p>
+
+
+
+
+
+
+<script>
+         function checkAge() {
+
+
+            let age = document.getElementById("age").value
+            let subscribed_id = document.getElementById("subscribed_id").value
+
+            if (age >= 18 && subscribed_id == 23456) {
+               
+                    document.getElementById("result").innerText = "welcome...!"
+
+            }else if(age >= 18 && subscribed_id !== 23456)  {
+                         document.getElementById("result").innerText = "enter valid subscribed_id"
+                }
+
+            else {
+                 document.getElementById("result").innerText = "you are child "
+            }
+        }
+      </script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h3>Combine multiple conditions — if a user is an adult and subscribed, print “Welcome!”.</h3>
+
+    <input type="text" placeholder="Enter u r username" id="username">
+    <input type="password" placeholder="passwordr" id="password">
+
+    <button onclick=" checkAge() ">check</button>
+    <p id="result">result</p>
+
+
+
+
+
+
+<script>
+         function checkAge() {
+
+
+            let username = document.getElementById("username").value
+            let password = document.getElementById("password").value
+
+            if (username == "ponthirupathi" && password === "12345678") {
+               
+                    document.getElementById("result").innerText = "welcome...!"
+
+            }else if(username == "ponthirupathi" && password !== "12345678")  {
+
+                         document.getElementById("result").innerText = "invalid password "
+                }
+
+            else {
+                 document.getElementById("result").innerText = "pls enter valid username"
+            }
+        }
+      </script>
+
+</body>
+</html>
