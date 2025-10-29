@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Ask the user (with prompt) for a number and print all numbers up to that value</h3>
+
+    <input type="number" id="number" placeholder="Enter any number">
+    <button onclick="red()">Check</button>
+
+    <p id="result">Result:</p>
+
+    <script>
+        function red() {
+            let a = document.getElementById("number").value;
+            let c = ' ';
+            for (let i = 1; i <= a; i++) {
+                c = c + i +" ";
+                
+            }
+            document.getElementById("result").innerText = c;
+        }
+    </script>
+</body>
+</html>
