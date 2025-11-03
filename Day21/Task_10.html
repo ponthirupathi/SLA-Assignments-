@@ -1,0 +1,27 @@
+<!-- Create an array of products and display all names dynamically using forEach() in HTML. -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task_10</title>
+</head>
+<body>
+  <h3>Products List</h3>
+  <ul id="list"></ul>
+
+  <script>
+    let products = ["laptop", "mobile", "headset", "backcase"];
+    let ul = document.getElementById("list");
+
+    products.forEach((item) => {
+      ul.innerHTML += `<li>${item}</li>`;
+    });
+  </script>
+</body>
+</html>
+
