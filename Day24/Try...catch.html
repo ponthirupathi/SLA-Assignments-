@@ -1,0 +1,23 @@
+<!-- Simple form validation system that uses try…catch -->
+
+<form id="validateForm">
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
+  <button type="submit">Login</button>
+</form>
+<script>
+const validateForm = document.getElementById('validateForm');
+const username = document.getElementById('username');
+const password = document.getElementById('password');
+validateForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  try {
+    if (username.value.trim() === '') throw new Error('Username required');
+    if (password.value.length < 6) throw new Error('Password must be at least 6 characters');
+    alert('Validation passed');
+  } catch (err) {
+    console.error(err);
+    alert('Error: ' + err.message);
+  }
+});
+</script>

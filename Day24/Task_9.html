@@ -1,0 +1,15 @@
+<button id="colorBtn">Change Color</button>
+<div id="colorBox" style="width:100px;height:100px;background:#ccc;"></div>
+<script>
+const colorBtn = document.getElementById('colorBtn');
+colorBtn.addEventListener('click', () => {
+  try {
+    const box = document.getElementById('colorBox');
+    if (!box) throw new Error('Element not found');
+    box.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+  } catch (err) {
+    console.error(err);
+    alert('Error: ' + err.message);
+  }
+});
+</script>

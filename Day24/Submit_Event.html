@@ -1,0 +1,14 @@
+<!-- 3. Submit event that prevents page reload -->
+<form id="myForm">
+  <input type="text" id="formInput">
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+const myForm = document.getElementById('myForm')
+const formInput = document.getElementById('formInput')
+myForm.addEventListener('submit', e => {
+  e.preventDefault()
+  alert('Form submitted: ' + formInput.value)
+})
+</script>

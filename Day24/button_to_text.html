@@ -1,0 +1,11 @@
+<!-- 1. Button that changes text when clicked -->
+<button id="changeBtn">Click me</button>
+<p id="textPara">Original text</p>
+
+<script>
+const changeBtn = document.getElementById('changeBtn')
+const textPara = document.getElementById('textPara')
+changeBtn.addEventListener('click', () => {
+  textPara.textContent = 'Text has changed!'
+})
+</script>

@@ -1,0 +1,15 @@
+<!-- 5. Function that throws an error when input number is negative -->
+<script>
+function checkNonNegative(n) {
+  if (n < 0) {
+    throw new Error('Number must not be negative')
+  }
+  return true
+}
+
+try {
+  checkNonNegative(-5)
+} catch (err) {
+  console.error('Error from checkNonNegative:', err)
+}
+</script>

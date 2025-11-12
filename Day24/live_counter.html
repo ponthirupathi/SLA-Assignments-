@@ -1,0 +1,13 @@
+<!-- “Live counter” input field that shows character count as the user types -->
+
+
+<label for="liveCounter">Type your message:</label>
+<input type="text" id="liveCounter">
+<div id="charCount">0 characters</div>
+<script>
+const liveCounter = document.getElementById('liveCounter');
+const charCount = document.getElementById('charCount');
+liveCounter.addEventListener('input', (e) => {
+  charCount.textContent = e.target.value.length + ' characters';
+});
+</script>

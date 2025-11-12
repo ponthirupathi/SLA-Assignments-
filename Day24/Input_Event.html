@@ -1,0 +1,12 @@
+<!-- 2. Input event to display user input live -->
+<label for="liveInput">Type here:</label>
+<input type="text" id="liveInput">
+<div id="liveDisplay"></div>
+
+<script>
+const liveInput = document.getElementById('liveInput')
+const liveDisplay = document.getElementById('liveDisplay')
+liveInput.addEventListener('input', e => {
+  liveDisplay.textContent = 'You typed: ' + e.target.value
+})
+</script>
