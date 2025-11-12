@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Live Input Update</title>
+</head>
+<body>
+  <label for="liveInput">Type something: </label>
+  <input type="text" id="liveInput" placeholder="Start typing…">
+
+  <p>You typed: <span id="outputText"></span></p>
+
+  <script>
+    const input = document.getElementById('liveInput');
+    const output = document.getElementById('outputText');
+
+    input.addEventListener('input', (event) => {
+      output.textContent = event.target.value;
+    });
+  </script>
+</body>
+</html>

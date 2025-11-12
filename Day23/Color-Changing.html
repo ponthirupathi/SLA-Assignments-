@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Color-Changing Buttons</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    .colorButton {
+      margin: 8px;
+      padding: 12px 24px;
+      font-size: 16px;
+      cursor: pointer;
+      border: 1px solid #555;
+      border-radius: 4px;
+      background-color: #eee;
+      transition: background-color 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Click any button to change its colour</h1>
+
+  <button class="colorButton" data-color="#FF6B6B">Red</button>
+  <button class="colorButton" data-color="#4ECDC4">Turquoise</button>
+  <button class="colorButton" data-color="#F7FF6B">Yellow</button>
+  <button class="colorButton" data-color="#6BFF9E">Green</button>
+  <button class="colorButton" data-color="#6B6BFF">Blue</button>
+
+  <script>
+    
+    const buttons = document.querySelectorAll('.colorButton');
+
+   
+    buttons.forEach(btn => {
+      btn.addEventListener('click', (event) => {
+       
+        const newColor = btn.getAttribute('data-color');
+       
+        btn.style.backgroundColor = newColor;
+       
+        btn.style.color = (newColor === '#F7FF6B' ? '#000' : '#fff');
+      });
+    });
+  </script>
+
+</body>
+</html>

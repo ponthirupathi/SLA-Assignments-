@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple To-Do List</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      max-width: 500px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+    }
+    #newTaskForm {
+      display: flex;
+      gap: 10px;
+    }
+    #taskInput {
+      flex: 1;
+      padding: 8px;
+      font-size: 16px;
+    }
+    #addBtn {
+      padding: 8px 16px;
+      font-size: 16px;
+    }
+    #taskList {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+    .taskItem {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+    .taskText {
+      flex: 1;
+    }
+    .deleteBtn {
+      background: none;
+      border: none;
+      color: red;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My To-Do List</h1>
+
+  <form id="newTaskForm">
+    <input type="text" id="taskInput" placeholder="Add a new task…" required />
+    <button type="submit" id="addBtn">Add</button>
+  </form>
+
+  <ul id="taskList">
+   
+  </ul>
+
+  <script>
+    const form = document.getElementById('newTaskForm');
+    const input = document.getElementById('taskInput');
+    const taskList = document.getElementById('taskList');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const taskText = input.value.trim();
+      if (taskText === '') return;
+
+      // Create new li
+      const li = document.createElement('li');
+      li.className = 'taskItem';
+
+      // Create span for text
+      const span = document.createElement('span');
+      span.className = 'taskText';
+      span.textContent = taskText;
+
+      // Create delete button
+      const delBtn = document.createElement('button');
+      delBtn.className = 'deleteBtn';
+      delBtn.textContent = 'Delete';
+
+      // When delete clicked → remove the li
+      delBtn.addEventListener('click', function() {
+        // parent is li
+        taskList.removeChild(li);
+      });
+
+      
+      li.appendChild(span);
+      li.appendChild(delBtn);
+
+    
+      taskList.appendChild(li);
+
+   
+      input.value = '';
+      input.focus();
+    });
+  </script>
+
+</body>
+</html>

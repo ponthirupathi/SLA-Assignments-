@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic HTML Insert with innerHTML</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      max-width: 400px;
+      margin: auto;
+    }
+    button {
+      margin: 8px 0;
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #output {
+      margin-top: 20px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Insert Formatted HTML Dynamically</h1>
+
+  <label for="userText">Type something: </label><br>
+  <input type="text" id="userText" placeholder="Enter your text…" /><br>
+
+  <button id="boldInsertBtn">Insert with <b>bold</b></button>
+  <button id="italicInsertBtn">Insert with <i>italic</i></button>
+
+  <div id="output">
+ 
+  </div>
+
+  <script>
+    const inputField = document.getElementById('userText');
+    const boldBtn = document.getElementById('boldInsertBtn');
+    const italicBtn = document.getElementById('italicInsertBtn');
+    const outputDiv = document.getElementById('output');
+
+    boldBtn.addEventListener('click', () => {
+      const text = inputField.value.trim();
+      if (!text) {
+        alert("Please type something first.");
+        return;
+      }
+   
+      outputDiv.innerHTML = `You typed: <b>${text}</b>`;
+    });
+
+    italicBtn.addEventListener('click', () => {
+      const text = inputField.value.trim();
+      if (!text) {
+        alert("Please type something first.");
+        return;
+      }
+    
+      outputDiv.innerHTML = `You typed: <i>${text}</i>`;
+    });
+  </script>
+
+</body>
+</html>
