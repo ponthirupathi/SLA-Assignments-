@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+<h3>Click a button to show the answer</h3>
+
+<button id="q1">Show Answer 1</button>
+<p id="a1" style="display:none;">Answer: JavaScript is a language.</p>
+
+<button id="q2">Show Answer 2</button>
+<p id="a2" style="display:none;">Answer: jQuery is a JS library.</p>
+
+<script>
+$("#q1").click(() => $("#a1").toggle());
+$("#q2").click(() => $("#a2").toggle());
+</script>
+
+</body>
+</html>

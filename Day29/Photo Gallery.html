@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+<img id="img" src="./brinjal image.jpeg" width="200">
+
+<br><br>
+
+<button id="next">Fade Out → Fade In</button>
+
+<script>
+$("#next").click(function() {
+    $("#img").fadeOut(500, function() {
+        $("#img").attr("src", "https://via.placeholder.com/200?text=New").fadeIn(500);
+    });
+});
+</script>
+
+</body>
+</html>

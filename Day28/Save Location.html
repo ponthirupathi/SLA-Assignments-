@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3 id="loc"></h3>
+<button onclick="saveLocation()">Save Location</button>
+
+<script>
+let latitude, longitude;
+
+navigator.geolocation.getCurrentPosition(pos => {
+  latitude = pos.coords.latitude;
+  longitude = pos.coords.longitude;
+
+  document.getElementById("loc").innerHTML =
+    `Latitude: ${latitude} <br> Longitude: ${longitude}`;
+});
+
+function saveLocation() {
+  localStorage.setItem("lat", latitude);
+  localStorage.setItem("lon", longitude);
+  alert("Location Saved!");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!-- 10. Display followers with avatar + username + link -->
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="git" placeholder="GitHub username">
+<button id="show">Show Followers</button>
+<div id="box" style="display:flex;flex-wrap:wrap;gap:12px;"></div>
+
+<script>
+document.getElementById("show").onclick = async () => {
+    let uname = document.getElementById("git").value;
+    let box = document.getElementById("box");
+    box.innerHTML = "Loading...";
+
+    try {
+        let res = await fetch(`https://api.github.com/users/${uname}/followers`);
+        if (!res.ok) throw new Error("Invalid Username");
+
+        let followers = await res.json();
+        box.innerHTML = followers.map(f => `
+            <div style="padding:10px;border:1px solid #ddd;width:160px;text-align:center;">
+                <img src="${f.avatar_url}" width="80" style="border-radius:50%;">
+                <p>${f.login}</p>
+                <a href="${f.html_url}" target="_blank">View Profile</a>
+            </div>
+        `).join("");
+    }
+    catch (err) {
+        box.innerHTML = err.message;
+    }
+};
+</script>
+
+</body>
+</html>

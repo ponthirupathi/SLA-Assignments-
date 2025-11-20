@@ -1,0 +1,25 @@
+<!-- Fetch GitHub profile of ponthirupathi -->
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="output"></div>
+
+<script>
+fetch("https://api.github.com/users/ponthirupathi")
+  .then(res => res.json())
+  .then(data => {
+      console.log(data); // Shows in console
+
+      document.getElementById("output").innerHTML = `
+          <h3>GitHub User Data</h3>
+          <p><strong>Login:</strong> ${data.login}</p>
+          <p><strong>ID:</strong> ${data.id}</p>
+          <p><strong>Public Repos:</strong> ${data.public_repos}</p>
+          <p><strong>Followers:</strong> ${data.followers}</p>
+      `;
+  });
+</script>
+
+</body>
+</html>

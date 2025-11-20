@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+.section { display: none; padding: 20px; background: #eee; margin-bottom: 10px; }
+</style>
+</head>
+
+<body>
+
+<button id="load">Load Portfolio Sections</button>
+
+<div id="about" class="section">About Section</div>
+<div id="skills" class="section">Skills Section</div>
+<div id="projects" class="section">Projects Section</div>
+
+<script>
+$("#load").click(function() {
+    $(".section").each(function(i) {
+        $(this).delay(i * 500).fadeIn(800);
+    });
+});
+</script>
+
+</body>
+</html>

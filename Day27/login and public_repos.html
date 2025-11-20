@@ -1,0 +1,18 @@
+<!-- 2. Show login and public_repos in HTML -->
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+fetch("https://api.github.com/users/ponthirupathi")
+  .then(res => res.json())
+  .then(data => {
+      document.body.innerHTML += `
+          <p>Login: ${data.login}</p>
+          <p>Public Repositories: ${data.public_repos}</p>
+      `;
+  });
+</script>
+
+</body>
+</html>

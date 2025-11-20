@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="toggle-btn">Toggle Panel</button>
+<div id="panel" style="display: none; background: rgb(229, 141, 141); padding: 10px;">
+  This is a sliding panel.
+  <ol>phone</ol>
+  <ol>laptop</ol>
+  <ol>tab</ol>
+  <ol>Watch</ol>
+  
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $("#toggle-btn").click(function() {
+    $("#panel").slideToggle(400); // 400 ms
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!-- 7. Dynamic username follower fetch -->
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="user" placeholder="Enter GitHub username">
+<button id="load">Get Followers</button>
+<div id="output"></div>
+
+<script>
+document.getElementById("load").onclick = async () => {
+    let uname = document.getElementById("user").value;
+    let res = await fetch(`https://api.github.com/users/${uname}/followers`);
+    let data = await res.json();
+
+    document.getElementById("output").innerHTML =
+        data.map(f => f.login).join("<br>");
+};
+</script>
+
+</body>
+</html>

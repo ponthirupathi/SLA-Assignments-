@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+#card { width: 200px; padding: 10px; background: #f1f1f1; cursor: pointer; }
+#details { display: none; margin-top: 10px; }
+</style>
+</head>
+
+<body>
+
+<div id="card">
+    <h3>Click to Expand</h3>
+    <div id="details">
+        This is extra information inside the card.
+    </div>
+</div>
+
+<script>
+$("#card").click(function() {
+    $("#details").slideToggle();
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+#note { display: none; background: yellow; padding: 10px; }
+</style>
+</head>
+
+<body>
+
+<button id="show">Show Notification</button>
+
+<div id="note">This is a notification!</div>
+
+<script>
+$("#show").click(function() {
+    $("#note").slideDown();
+});
+</script>
+
+</body>
+</html>

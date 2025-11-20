@@ -1,0 +1,29 @@
+<!-- 8. Show error on invalid username -->
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="u" placeholder="Enter username">
+<button id="go">Fetch</button>
+<div id="msg"></div>
+
+<script>
+document.getElementById("go").onclick = async () => {
+    let uname = document.getElementById("u").value;
+
+    try {
+        let res = await fetch(`https://api.github.com/users/${uname}/followers`);
+        if (!res.ok) throw new Error("Invalid Username");
+
+        let data = await res.json();
+        document.getElementById("msg").innerHTML =
+            data.map(f => f.login).join("<br>");
+    }
+    catch (err) {
+        document.getElementById("msg").innerHTML = err.message;
+    }
+};
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!-- 9. Loading message -->
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="name" placeholder="Username">
+<button id="fetchBtn">Load Followers</button>
+<div id="status"></div>
+
+<script>
+document.getElementById("fetchBtn").onclick = async () => {
+    let uname = document.getElementById("name").value;
+    document.getElementById("status").innerHTML = "Loading...";
+
+    try {
+        let res = await fetch(`https://api.github.com/users/${uname}/followers`);
+        if (!res.ok) throw new Error("Invalid Username");
+
+        let data = await res.json();
+        document.getElementById("status").innerHTML =
+            data.map(f => f.login).join("<br>");
+    }
+    catch (err) {
+        document.getElementById("status").innerHTML = err.message;
+    }
+};
+</script>
+
+</body>
+</html>

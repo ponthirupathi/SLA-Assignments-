@@ -1,0 +1,19 @@
+<!-- 6. Show GitHub followers when button clicked -->
+<!DOCTYPE html>
+<html>
+<body>
+
+<button id="btn">Load Followers</button>
+<div id="result"></div>
+
+<script>
+document.getElementById("btn").onclick = async () => {
+    let res = await fetch("https://api.github.com/users/ponthirupathi/followers");
+    let data = await res.json();
+    document.getElementById("result").innerHTML =
+        data.map(f => f.login).join("<br>");
+};
+</script>
+
+</body>
+</html>
